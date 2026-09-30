@@ -1,5 +1,4 @@
 
-
 const movieFrom = document.querySelector("#movie-form")
 const movieInput = document.querySelector("#movie-input")
 const movieHub = document.querySelector("#movieHub")
@@ -14,19 +13,21 @@ movieFrom?.addEventListener("submit", (e) => {
     }
 
     console.log(movieName);
+
     searchMovies(movieName)
 })
 
 async function searchMovies(movieName) {
 
-    movieHub.innōerHTML = `<p class="loader"> ${encodeURIComponent (movieName)}</p>`
+    movieHub.innerHTML = `<p class="loader"> ${encodeURIComponent(movieName)}</p>`
     let res = await fetch(`https://www.omdbapi.com/?apikey=5c34d675&s=${movieName}`)
     let data = await res.json();
     console.log(data);
 
     if (data.Response === "True") {
         displayMovies(data.Search)
-    } else {
+    }
+    else {
         movieHub.innerHTML = `<p>${data.Error}</p>`
     }
 
@@ -36,7 +37,6 @@ async function searchMovies(movieName) {
 function displayMovies(movies) {
 
     movieHub.innerHTML = ""
-
 
     movies.forEach((movie) => {
 
