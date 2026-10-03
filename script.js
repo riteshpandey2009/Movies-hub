@@ -2,6 +2,7 @@
 const movieFrom = document.querySelector("#movie-form")
 const movieInput = document.querySelector("#movie-input")
 const movieHub = document.querySelector("#movieHub")
+const hamburger= document.querySelector("#hamburger")
 
 movieFrom?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -19,8 +20,8 @@ movieFrom?.addEventListener("submit", (e) => {
 
 async function searchMovies(movieName) {
 
-    movieHub.innerHTML = `<p class="loader"> ${encodeURIComponent(movieName)}</p>`
-    let res = await fetch(`https://www.omdbapi.com/?apikey=5c34d675&s=${movieName}`)
+    movieHub.innerHTML = `<p class="loader"></p>`
+    let res = await fetch(`https://www.omdbapi.com/?apikey=5c34d675&s=${encodeURIComponent(movieName)}`)
     let data = await res.json();
     console.log(data);
 
@@ -67,4 +68,11 @@ movieHub?.addEventListener("click", (e) => {
 
     location.href = `movie-details.html?id=${imdbID}`
 
+})
+
+
+hamburger?.addEventListener("click" , (e)=>{
+    e.stopPropagation();
+
+    
 })
