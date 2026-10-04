@@ -10,8 +10,8 @@
 </head>
 
 <body class="bg-zinc-900 text-white selection:bg-red-500 selection:text-white">
-    <header class=" fixed inset-x-0 border-b-2 border-zinc-500/10">
-        <div class="flex max-w-6xl mx-auto justify-between px-4 py-2 bg-black z-10">
+    <header class=" fixed inset-x-0 border-b-2  border-zinc-500/10">
+        <div class="flex max-w-6xl mx-auto justify-between px-6 py-4 bg-black z-10">
 
             <div class="flex gap-4 items-center">
                 <svg class="w-7 h-7 text-red-600" fill="currentColor" viewBox="0 0 24 24">
@@ -28,12 +28,20 @@
                 </svg>
 
             </div>
+
+
+        </div>
+        <div id="option" class="hidden">
+            <a href="">Home</a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
         </div>
     </header>
 
-    <main class=" pt-20">
+    <main class=" pt-20 max-w-4xl mx-auto">
         <div>
-            <form action="" id="movie-form">
+            <form class="mx-auto" action="" id="movie-form">
                 <input id="movie-input" type="text" placeholder="Search Movie title (e.g. Inception , The Matrix)....">
                 <button>Search</button>
             </form>

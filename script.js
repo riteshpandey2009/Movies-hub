@@ -2,7 +2,8 @@
 const movieFrom = document.querySelector("#movie-form")
 const movieInput = document.querySelector("#movie-input")
 const movieHub = document.querySelector("#movieHub")
-const hamburger= document.querySelector("#hamburger")
+const hamburger = document.querySelector("#hamburger")
+const option = document.querySelector("#option")
 
 movieFrom?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -74,5 +75,7 @@ movieHub?.addEventListener("click", (e) => {
 hamburger?.addEventListener("click" , (e)=>{
     e.stopPropagation();
 
+    option?.classList.toggle("hidden")
     
+    console.log("hii");    
 })
