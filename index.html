@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-zinc-900 text-white selection:bg-red-500 selection:text-white">
-    <header class=" fixed inset-x-0 border-b-2  border-zinc-500/10">
+<body class="bg-black text-white selection:bg-red-500 selection:text-white">
+    <header class=" fixed inset-x-0 border-b-2 border-zinc-500/10">
         <div class="flex max-w-6xl mx-auto justify-between px-6 py-4 bg-black z-10">
 
             <div class="flex gap-4 items-center">
@@ -31,19 +31,35 @@
 
 
         </div>
-        <div id="option" class="hidden">
+        <div id="option" class="">
             <a href="">Home</a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+            <a href="">Search</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
         </div>
     </header>
 
-    <main class=" pt-20 max-w-4xl mx-auto">
-        <div>
-            <form class="mx-auto" action="" id="movie-form">
-                <input id="movie-input" type="text" placeholder="Search Movie title (e.g. Inception , The Matrix)....">
-                <button>Search</button>
+    <main class=" pt-25 min-w-xl mx-auto">
+        <div class="flex flex-col gap-6">
+            <div class="mx-auto font-serif ">
+                <h1 class="mx-20 font-bold text-4xl">Find Your Next <span class="text-red-400">Movie</span></h1>
+                <p class="font-light text-red-300 mt-2">Search movies by title and explore detailed information, rating
+                    ,cast,and more </p>
+            </div>
+            <form class="mx-auto  items-center justify-center" action="" id="movie-form">
+                <div>
+                    <div class="pl-2 border border-zinc-600 rounded-sm flex items-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+
+                        <input id="movie-input" class=" px-2 py-4 min-w-sm" type="text"
+                            placeholder="Search Movie title (e.g. Inception , The Matrix)....">
+                        <button class="bg-red-700 px-4 py-2 rounded-lg  tracking-tighter gap-4">Search</button>
+                    </div>
+
+                </div>
             </form>
         </div>
 
