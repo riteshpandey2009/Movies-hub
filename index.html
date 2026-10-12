@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-black text-white selection:bg-red-500 selection:text-white">
+<body class="bg-black text-white selection:bg-red-500 selection:text-white ">
     <header class=" fixed inset-x-0 border-b-2 border-zinc-500/10">
-        <div class="flex max-w-6xl mx-auto justify-between px-6 py-4 bg-black z-10">
+        <div class="flex max-w-6xl mx-auto justify-between px-2 py-4 bg-black z-10">
 
             <div class="flex gap-4 items-center">
                 <svg class="w-7 h-7 text-red-600" fill="currentColor" viewBox="0 0 24 24">
@@ -21,52 +21,95 @@
 
                 <h1 class="text-red-500">Movie Hub</h1>
             </div>
-
-            <div id="hamburger">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-
-            </div>
-
-
+            <nav class="flex justify-between mx-auto min-w-sm ">
+                <div id="option" class="flex items-center justify-center gap-4 space-x-0.5">
+                    <a href="index.html" class="hover:text-red-300">Home</a>
+                    <a href="#search" class="hover:text-red-300">Search</a>
+                    <a href="#about" class="hover:text-red-300">About</a>
+                    <a href="" class="hover:text-red-300">Contact</a>
+                </div>
+            </nav>
         </div>
-        <div id="option" class="">
-            <a href="">Home</a>
-            <a href="">Search</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-        </div>
+
+
     </header>
 
-    <main class=" pt-25 min-w-xl mx-auto">
+
+    <main class=" pt-20 min-w-xl mx-auto">
+
         <div class="flex flex-col gap-6">
             <div class="mx-auto font-serif ">
-                <h1 class="mx-20 font-bold text-4xl">Find Your Next <span class="text-red-400">Movie</span></h1>
-                <p class="font-light text-red-300 mt-2">Search movies by title and explore detailed information, rating
+                <h1 class="mx-25 font-medium text-4xl">Find Your Next <span
+                        class="bg-gradient-to-r from-pink-200 via-red-400 to-red-600 bg-clip-text text-transparent">Movie</span>
+                </h1>
+                <p class="font-light tracking-wide text-s text-pink-200 mt-1">Search movies by title and explore
+                    detailed information,
+                    rating
                     ,cast,and more </p>
             </div>
-            <form class="mx-auto  items-center justify-center" action="" id="movie-form">
-                <div>
-                    <div class="pl-2 border border-zinc-600 rounded-sm flex items-center">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <form class="mx-auto items-center justify-center" action="" id="movie-form">
+                <div id="search">
+                    <div class="px-2 border border-zinc-600 rounded-sm flex items-center">
+                        <svg class=" w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
 
-                        <input id="movie-input" class=" px-2 py-4 min-w-sm" type="text"
+                        <input id="movie-input" class="px-2 py-4 min-w-sm outline-none bg-none " type="text"
                             placeholder="Search Movie title (e.g. Inception , The Matrix)....">
-                        <button class="bg-red-700 px-4 py-2 rounded-lg  tracking-tighter gap-4">Search</button>
-                    </div>
+                        <div class="flex items-center px-2 bg-red-700 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
 
+                            <button class="cursor-pointer p-2 tracking-wider gap-4">Search</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
 
+        <div id="about"
+            class=" max-w-6xl font-serif max-h-6xl p-20 mx-auto bg-gradient-to-b from-red-500/50 via-[#141113] to-[#141113] rounded-lg my-5">
+            <div class="mx-auto flex flex-col justify-center items-center max-w-xl">
+                <img class="rounded-full" width="40" height="40" src="cropped_circle_image.png" alt="">
+                <h2 class="tracking-wider font-bold text-3xl my-2 py-2">Discover Great Cinema</h2>
+                <p class="tracking-wide text-center">Start by searching for a movie title above, or pick one of the
+                    curated recommendations below to explore full cast credentials, technical specs, and ratings.</p>
+            </div>
+            <div class="flex flex-row mx-auto mt-4 max-w-xl justify-between">
+
+                <section class="px-4 py-2 rounded-xl bg-zinc-800/45 flex gap-2">
+                    <img width="25" height="25"
+                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/imdb-icon.png"
+                        alt="">
+                    <p>IMDb & Metascore</p>
+                </section>
+
+                <section class="px-4 py-2 rounded-xl bg-zinc-800/45 flex gap-2">
+                    <img width="25" height="25"
+                        src="https://www.shutterstock.com/image-vector/cast-color-icon-actors-group-260nw-2160797837.jpg"
+                        alt="">
+                    <p>Full Cast & Crew</p>
+                </section>
+
+                <section class="px-4 py-2 rounded-xl bg-zinc-800/45 flex gap-2">
+                    <img width="25" height="25"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkI0oYYREtXmWJmS3AXrAgVbwl_3URz7izpD_O1GcNA&s=10"
+                        alt="">
+                    <p>Streaming Hub</p>
+                </section>
+
+            </div>
+        </div>
+
         <div id="movieHub"></div>
     </main>
-    <footer>
-        <p class="text-sm"> &copy; 2026 Ritesh Pandey. All rights reserved.</p>
+
+
+    <footer class="border-t-2 border-zinc-600 py-1 my-1">
+        <p class="text-xs text-center text-zinc-400"> &copy; 2026 Ritesh Pandey. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
